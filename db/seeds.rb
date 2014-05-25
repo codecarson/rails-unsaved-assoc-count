@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Answer.create([
+  { content: 'Correct' },
+  { content: 'Wrong' }
+])
+
+correct = Answer.find_by_content "Correct"
+
+q=Question.create({ content: "Choose Correctly", correct_answer: correct })
